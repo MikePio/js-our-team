@@ -20,8 +20,6 @@ Organizzare i singoli membri in card/schede
 */
 
 /*
-
-
 Dati:
 Wayne Barnett   Founder & CEO         wayne-barnett-founder-ceo.jpg
 Angela Caroll   Chief Editor          angela-caroll-chief-editor.jpg
@@ -90,21 +88,34 @@ const ourTeam = [
 
 // }
 
-const output = document.getElementById('output');
-//* ciclo for of
-for (let iterator of ourTeam) {
-  // const person = ourTeam[iterator];
-  // console.log(iterator);
-  for (let key in iterator) {
-    //ottengo tutte le chiavi (key: valore)
-    // console.log(key);
-    //ottengo tutti i valori (key: valore)
-    console.log(iterator[key]);
-    output.innerHTML += `${iterator[key]} <br>`
-  }
-  output.innerHTML += `------------------------------------- <br>`
-  console.log('-------------------------------------');
+// const output = document.getElementById('output');
+// //* ciclo for of
+// for (let iterator of ourTeam) {
+//   // const person = ourTeam[iterator];
+//   // console.log(iterator);
+//   for (let key in iterator) {
+//     //*ottengo tutte le chiavi (key: valore)
+//     // console.log(key);
+//     //*ottengo tutti i valori (key: valore)
+//     console.log(iterator[key]);
+//     output.innerHTML += `${iterator[key]} <br>`
+//   }
+//   output.innerHTML += `------------------------------------- <br>`
+//   console.log('-------------------------------------');
 
+// }
+
+//* BONUS ---------------------------------------------------------------------------------------------------------------
+
+const row = document.querySelector('.row');
+for (let iterator of ourTeam) {
+  row.innerHTML += `
+  <div class="output-card">
+    <img src="img/${iterator.photo}">
+    <h2 style="font-family:'Times New Roman', Times, serif;">${iterator.name}</h2> 
+    <h4>${iterator.rule}</h4> 
+  </div>
+    `
 }
 
 
