@@ -25,7 +25,7 @@ Organizzare i singoli membri in card/schede
 Dati:
 Wayne Barnett   Founder & CEO         wayne-barnett-founder-ceo.jpg
 Angela Caroll   Chief Editor          angela-caroll-chief-editor.jpg
-Walter Gordon   Office Manager        walter-gordon-office-manager.jpg9
+Walter Gordon   Office Manager        walter-gordon-office-manager.jpg
 Angela Lopez    Social Media Manager  angela-lopez-social-media-manager.jpg
 Scott Estrada   Developer             scott-estrada-developer.jpg
 Barbara Ramos   Graphic Designer      barbara-ramos-graphic-designer.jpg
@@ -45,7 +45,7 @@ const ourTeam = [
   {
     name: 'Walter Gordon',
     rule: 'Office Manager',
-    photo: 'walter-gordon-office-manager.jpg9'
+    photo: 'walter-gordon-office-manager.jpg'
   },
   {
     name: 'Angela Lopez' ,
@@ -78,7 +78,6 @@ const ourTeam = [
   
 // }
 
-
 //* ciclo for in
 // for (let key in ourTeam) {
 //   const person = ourTeam[key];
@@ -91,6 +90,7 @@ const ourTeam = [
 
 // }
 
+const output = document.getElementById('output');
 //* ciclo for of
 for (let iterator of ourTeam) {
   // const person = ourTeam[iterator];
@@ -100,8 +100,9 @@ for (let iterator of ourTeam) {
     // console.log(key);
     //ottengo tutti i valori (key: valore)
     console.log(iterator[key]);
-    
+    output.innerHTML += `${iterator[key]} <br>`
   }
+  output.innerHTML += `------------------------------------- <br>`
   console.log('-------------------------------------');
 
 }
