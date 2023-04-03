@@ -22,7 +22,6 @@ Organizzare i singoli membri in card/schede
 /*
 
 
-
 Dati:
 Wayne Barnett   Founder & CEO         wayne-barnett-founder-ceo.jpg
 Angela Caroll   Chief Editor          angela-caroll-chief-editor.jpg
@@ -65,8 +64,47 @@ const ourTeam = [
   }
 ]
 
+//* ciclo for
+// for (let i = 0; i < ourTeam.length; i++) {
+//   const person = ourTeam[i];
+//   // console.log(person);
+//   // console.log(ourTeam);
+//   for (let key in person) {
+//     const property = person[key];
+//     console.log(property);
+    
+//   }
+//   console.log('-------------------------------------');
+  
+// }
 
 
+//* ciclo for in
+// for (let key in ourTeam) {
+//   const person = ourTeam[key];
+//   // console.log(person);
+//   for (let key in person) {
+//     const element = person[key];
+//     console.log(element);
+//   }
+//   console.log('-------------------------------------');
+
+// }
+
+//* ciclo for of
+for (let iterator of ourTeam) {
+  // const person = ourTeam[iterator];
+  // console.log(iterator);
+  for (let key in iterator) {
+    //ottengo tutte le chiavi (key: valore)
+    // console.log(key);
+    //ottengo tutti i valori (key: valore)
+    console.log(iterator[key]);
+    
+  }
+  console.log('-------------------------------------');
+
+}
 
 
 
