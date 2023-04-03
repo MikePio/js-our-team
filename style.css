@@ -8,12 +8,9 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0;
 }
-/*
-body *{
-  margin: 20px 0;
-}
-*/
+
 h1, p{
   margin: 20px 0;
 }
@@ -29,6 +26,10 @@ p{
 
 .container{
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .row{
@@ -43,6 +44,7 @@ p{
   /* flex-wrap: wrap; */
   background-color: white;
   margin: 10px;
+  cursor: pointer;
 }
 
 .output-card img{
@@ -55,7 +57,14 @@ p{
 }
 
 
-
+@media screen and (max-width: 1500px) {
+  .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 
 
 

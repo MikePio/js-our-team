@@ -107,16 +107,39 @@ const ourTeam = [
 
 //* BONUS ---------------------------------------------------------------------------------------------------------------
 
-const row = document.querySelector('.row');
-for (let iterator of ourTeam) {
-  row.innerHTML += `
+// const row = document.querySelector('.row');
+// for (let iterator of ourTeam) {
+//   row.innerHTML += `
+//   <div class="output-card">
+//     <img src="img/${iterator.photo}">
+//     <h2 style="font-family:'Times New Roman', Times, serif;">${iterator.name}</h2> 
+//     <h4>${iterator.rule}</h4> 
+//   </div>
+//     `
+// }
+
+const firstRow = document.getElementById('first-row');
+const secondRow = document.getElementById('second-row');
+
+  for (let j = 0; j < 3; j++) {
+    firstRow.innerHTML += `
   <div class="output-card">
-    <img src="img/${iterator.photo}">
-    <h2 style="font-family:'Times New Roman', Times, serif;">${iterator.name}</h2> 
-    <h4>${iterator.rule}</h4> 
+    <img src="img/${ourTeam[j].photo}">
+    <h2 style="font-family:'Times New Roman', Times, serif;">${ourTeam[j].name}</h2> 
+    <h4>${ourTeam[j].rule}</h4> 
   </div>
     `
-}
+  }
+
+  for (let c = 3; c < 6; c++) {
+    secondRow.innerHTML += `
+  <div class="output-card">
+    <img src="img/${ourTeam[c].photo}">
+    <h2 style="font-family:'Times New Roman', Times, serif;">${ourTeam[c].name}</h2> 
+    <h4>${ourTeam[c].rule}</h4> 
+  </div>
+    `
+  }
 
 
 
