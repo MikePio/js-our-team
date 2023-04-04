@@ -50,9 +50,17 @@ p{
 .output-card img{
   width: 380px;
   padding-bottom: 20px;
+
+  transition: all 0.5s;
 }
 
-.output-card h4:last-child{
+.output-card img:hover{
+  transform: scale(1.1);
+
+
+}
+
+  .output-card h4:last-child{
   padding-bottom: 20px;
 }
 

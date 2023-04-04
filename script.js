@@ -107,6 +107,7 @@ const ourTeam = [
 
 //* BONUS ---------------------------------------------------------------------------------------------------------------
 
+//* soluzione con una row (Non responsive)
 // const row = document.querySelector('.row');
 // for (let iterator of ourTeam) {
 //   row.innerHTML += `
@@ -118,6 +119,7 @@ const ourTeam = [
 //     `
 // }
 
+//* soluzione con 2 row (responsive)
 const firstRow = document.getElementById('first-row');
 const secondRow = document.getElementById('second-row');
 
